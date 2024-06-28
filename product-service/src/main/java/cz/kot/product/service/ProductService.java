@@ -10,12 +10,23 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * Service class - business logic
+ */
 @Service
 @RequiredArgsConstructor
 @Slf4j
 public class ProductService {
     private final ProductRepository productRepository;
 
+    /**
+     * Receives requests from the controller to create products.
+     * It creates the products and communicates with the repository to save them to the database.
+     * The created products are then sent back to the controller for confirmation.
+     *
+     * @param productRequest product requested for creation
+     * @return a created product
+     */
     public ProductResponse createProduct (ProductRequest productRequest) {
         Product product = Product.builder()
                 .name(productRequest.name())
@@ -27,6 +38,13 @@ public class ProductService {
         return new ProductResponse(product.getId(), product.getName(), product.getDescription(), product.getPrice());
     }
 
+    /**
+     * Receives requests from the controller to retrieve all products.
+     * It communicates with the repository to fetch all products from the database.
+     * The result is then returned to the controller.
+     *
+     * @return list of all products
+     */
     public List<ProductResponse> getAllProducts() {
         return productRepository.findAll()
                 .stream()
