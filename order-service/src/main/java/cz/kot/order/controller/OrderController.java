@@ -6,6 +6,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * Controller - handles requests that come from the client
+ */
 @RestController
 @RequestMapping("/api/order")
 @RequiredArgsConstructor
@@ -15,7 +18,7 @@ public class OrderController {
 
     /**
      * Receives requests from the client for order placement.
-     * It communicates with th service layer to place the orders.
+     * It communicates with the service layer to place the orders.
      * Once the orders are placed, a confirmation is sent back to the client.
      *
      * @param orderRequest order requested for placement
