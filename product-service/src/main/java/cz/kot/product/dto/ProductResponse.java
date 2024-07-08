@@ -8,7 +8,9 @@ import java.math.BigDecimal;
  * @param id
  * @param name
  * @param description
+ * @param skuCode
  * @param price
  */
-public record ProductResponse(String id, String name, String description, BigDecimal price) {
+public record ProductResponse(String id, String name, String description,
+                              String skuCode, BigDecimal price) {
 }
