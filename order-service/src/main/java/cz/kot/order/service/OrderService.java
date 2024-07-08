@@ -2,9 +2,12 @@ package cz.kot.order.service;
 
 import cz.kot.order.client.InventoryClient;
 import cz.kot.order.dto.OrderRequest;
+import cz.kot.order.event.OrderPlacedEvent;
 import cz.kot.order.model.Order;
 import cz.kot.order.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
@@ -14,10 +17,12 @@ import java.util.UUID;
  */
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class OrderService {
 
     private final OrderRepository orderRepository;
     private final InventoryClient inventoryClient;
+    private final KafkaTemplate<String, OrderPlacedEvent> kafkaTemplate;
 
     /**
      * Receives requests from the controller to place orders.
@@ -39,6 +44,11 @@ public class OrderService {
             order.setPrice(orderRequest.price());
             order.setQuantity(orderRequest.quantity());
             orderRepository.save(order);
+
+            OrderPlacedEvent orderPlacedEvent = new OrderPlacedEvent(order.getOrderNumber(), orderRequest.userDetails().email());
+            log.info("Start - Sending OrderPlacedEvent {} to Kafka topic order-placed", orderPlacedEvent);
+            kafkaTemplate.send("order-placed", orderPlacedEvent);
+            log.info("End - Sending OrderPlacedEvent {} to Kafka topic order-placed", orderPlacedEvent);
         } else {
             throw new RuntimeException("Product with SkuCode " + orderRequest.skuCode() + " is not in stock");
         }
