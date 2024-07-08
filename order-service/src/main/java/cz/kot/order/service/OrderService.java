@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 /**
@@ -41,7 +42,7 @@ public class OrderService {
             Order order = new Order();
             order.setOrderNumber(UUID.randomUUID().toString());
             order.setSkuCode(orderRequest.skuCode());
-            order.setPrice(orderRequest.price());
+            order.setPrice(orderRequest.price().multiply(BigDecimal.valueOf(orderRequest.quantity())));
             order.setQuantity(orderRequest.quantity());
             orderRepository.save(order);
 
