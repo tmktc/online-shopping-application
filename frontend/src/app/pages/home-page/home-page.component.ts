@@ -1,12 +1,12 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { OidcSecurityService } from 'angular-auth-oidc-client';
-import { Product } from '../../model/product';
-import { ProductService } from '../../services/product/product.service';
-import { AsyncPipe, JsonPipe } from '@angular/common';
-import { Router } from '@angular/router';
-import { Order } from '../../model/order';
-import { FormsModule } from '@angular/forms';
-import { OrderService } from '../../services/order/order.service';
+import {Component, inject, OnInit} from '@angular/core';
+import {OidcSecurityService} from 'angular-auth-oidc-client';
+import {Product} from '../../model/product';
+import {ProductService} from '../../services/product/product.service';
+import {AsyncPipe, JsonPipe} from '@angular/common';
+import {Router} from '@angular/router';
+import {Order} from '../../model/order';
+import {FormsModule} from '@angular/forms';
+import {OrderService} from '../../services/order/order.service';
 
 @Component({
   selector: 'app-homepage',

@@ -1,8 +1,8 @@
 package cz.kot.inventory.service;
 
+import cz.kot.inventory.repository.InventoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import cz.kot.inventory.repository.InventoryRepository;
 
 /**
  * Service class - business logic

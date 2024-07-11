@@ -1,9 +1,9 @@
 package cz.kot.inventory.controller;
 
+import cz.kot.inventory.service.InventoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import cz.kot.inventory.service.InventoryService;
 
 /**
  * Controller - handles requests that come from the client

@@ -1,7 +1,6 @@
 package cz.kot.order.stubs;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
-import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
 
 public class InventoryClientStub {
 
