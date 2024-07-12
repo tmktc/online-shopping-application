@@ -20,7 +20,7 @@ public class InventoryController {
      * It communicates with the service layer to check the stock status.
      * Once the status of the stock is checked, a status confirmation is sent back to the client.
      *
-     * @param skuCode skuCode of the product to check the stock status
+     * @param skuCode  skuCode of the product to check the stock status
      * @param quantity quantity that is expected to be in stock
      * @return true if the given product is in stock in the expected quantity, false if not
      */

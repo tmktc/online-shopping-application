@@ -27,7 +27,7 @@ public class ProductService {
      * @param productRequest product requested for creation
      * @return a created product
      */
-    public ProductResponse createProduct (ProductRequest productRequest) {
+    public ProductResponse createProduct(ProductRequest productRequest) {
         Product product = Product.builder()
                 .name(productRequest.name())
                 .description(productRequest.description())

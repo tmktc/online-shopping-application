@@ -14,7 +14,7 @@
         <h4 class="text-green-500 font-bold">Order Placed Successfully</h4>
       } @else if (orderFailed) {
         <h4 class="text-red-500 font-bold">Order Failed, please try again later</h4>
-        @if(quantityIsNull) {
+        @if (quantityIsNull) {
           <h4 class="text-red-500 font-bold">Quantity cannot be null</h4>
         }
       }
@@ -27,7 +27,7 @@
                 Price: {{ product.price }}
               </span>
               <br/>
-              <span >
+              <span>
                 Quantity: <input type="number" #quantityInput/>
               </span>
               <br/>

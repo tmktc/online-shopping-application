@@ -17,6 +17,10 @@ class InventoryServiceApplicationTests {
     @ServiceConnection
     static MySQLContainer mySQLContainer = new MySQLContainer("mysql:8.3.0");
 
+    static {
+        mySQLContainer.start();
+    }
+
     @LocalServerPort
     private Integer port;
 
@@ -24,10 +28,6 @@ class InventoryServiceApplicationTests {
     void setup() {
         RestAssured.baseURI = "http://localhost";
         RestAssured.port = port;
-    }
-
-    static {
-        mySQLContainer.start();
     }
 
     @Test

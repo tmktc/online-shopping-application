@@ -17,7 +17,7 @@ public class InventoryService {
      * Receives requests from the controller for stock check.
      * It communicates with the repository to check whether the given product is in stock in the given quantity.
      *
-     * @param skuCode skuCode of the product to check the stock status
+     * @param skuCode  skuCode of the product to check the stock status
      * @param quantity quantity that is expected to be in stock
      * @return true if the given product is in stock in the expected quantity, false if not
      */

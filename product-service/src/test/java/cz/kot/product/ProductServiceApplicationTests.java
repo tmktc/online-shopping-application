@@ -15,6 +15,10 @@ class ProductServiceApplicationTests {
     @ServiceConnection
     static MongoDBContainer mongoDBContainer = new MongoDBContainer("mongo:7.0.5");
 
+    static {
+        mongoDBContainer.start();
+    }
+
     @LocalServerPort
     private Integer port;
 
@@ -22,10 +26,6 @@ class ProductServiceApplicationTests {
     void setup() {
         RestAssured.baseURI = "http://localhost";
         RestAssured.port = port;
-    }
-
-    static {
-        mongoDBContainer.start();
     }
 
     @Test

@@ -20,26 +20,26 @@ import {OrderService} from '../../services/order/order.service';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-  private readonly oidcSecurityService = inject(OidcSecurityService);
-  private readonly productService = inject(ProductService);
-  private readonly orderService = inject(OrderService);
-  private readonly router = inject(Router);
   isAuthenticated = false;
   products: Array<Product> = [];
   quantityIsNull = false;
   orderSuccess = false;
   orderFailed = false;
+  private readonly oidcSecurityService = inject(OidcSecurityService);
+  private readonly productService = inject(ProductService);
+  private readonly orderService = inject(OrderService);
+  private readonly router = inject(Router);
 
   ngOnInit(): void {
     this.oidcSecurityService.isAuthenticated$.subscribe(
-      ({ isAuthenticated }) => {
+      ({isAuthenticated}) => {
         this.isAuthenticated = isAuthenticated;
         if (isAuthenticated) {
           this.productService.getProducts()
             .pipe()
             .subscribe((products) => {
-            this.products = products;
-          });
+              this.products = products;
+            });
         }
       }
     );
