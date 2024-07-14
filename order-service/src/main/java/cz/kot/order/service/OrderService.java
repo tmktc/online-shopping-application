@@ -30,7 +30,7 @@ public class OrderService {
      * Firstly, it checks whether the given products are in stock in the given quantities
      * through communication with inventory service.
      * If the products are in stock, it places the orders and communicates with the repository
-     * to save them to the database.
+     * to save them to the database and sends Kafka notification.
      * If the products are not in stock, it throws a RuntimeException.
      *
      * @param orderRequest order requested for placement
