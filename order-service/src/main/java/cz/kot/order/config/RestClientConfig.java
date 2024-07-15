@@ -15,6 +15,10 @@ import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 
 import java.time.Duration;
 
+
+/**
+ * Configuration for synchronous communication with Inventory Service
+ */
 @Configuration
 @RequiredArgsConstructor
 public class RestClientConfig {
