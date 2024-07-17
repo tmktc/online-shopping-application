@@ -5,6 +5,9 @@ import io.micrometer.observation.aop.ObservedAspect;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Observation configuration
+ */
 @Configuration
 public class ObservationConfig {
     @Bean

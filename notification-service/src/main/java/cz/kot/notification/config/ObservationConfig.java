@@ -8,6 +8,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 
+/**
+ * Observation configuration
+ */
 @Configuration
 @RequiredArgsConstructor
 public class ObservationConfig {
