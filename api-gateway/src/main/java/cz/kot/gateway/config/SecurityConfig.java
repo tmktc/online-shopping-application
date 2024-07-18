@@ -11,6 +11,9 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.List;
 
+/**
+ * Security configuration - Keycloak
+ */
 @Configuration
 public class SecurityConfig {
 
