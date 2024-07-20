@@ -30,6 +30,9 @@ class InventoryServiceApplicationTests {
         RestAssured.port = port;
     }
 
+    /**
+     * Tests whether inventory-service correctly handles requests
+     */
     @Test
     void shouldReadInventory() {
         var response = RestAssured.given()
