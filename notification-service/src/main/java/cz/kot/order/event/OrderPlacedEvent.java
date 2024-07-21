@@ -39,8 +39,9 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
     /**
      * All-args constructor.
+     *
      * @param orderNumber The new value for orderNumber
-     * @param email The new value for email
+     * @param email       The new value for email
      */
     public OrderPlacedEvent(java.lang.CharSequence orderNumber, java.lang.CharSequence email) {
         this.orderNumber = orderNumber;
@@ -53,6 +54,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
     /**
      * Return the BinaryMessageEncoder instance used by this class.
+     *
      * @return the message encoder used by this class
      */
     public static BinaryMessageEncoder<OrderPlacedEvent> getEncoder() {
@@ -61,6 +63,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
     /**
      * Return the BinaryMessageDecoder instance used by this class.
+     *
      * @return the message decoder used by this class
      */
     public static BinaryMessageDecoder<OrderPlacedEvent> getDecoder() {
@@ -69,6 +72,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
     /**
      * Create a new BinaryMessageDecoder instance for this class that uses the specified {@link SchemaStore}.
+     *
      * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
      * @return a BinaryMessageDecoder instance for this class backed by the given SchemaStore
      */
@@ -78,6 +82,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
     /**
      * Deserializes a OrderPlacedEvent from a ByteBuffer.
+     *
      * @param b a byte buffer holding serialized data for an instance of this class
      * @return a OrderPlacedEvent instance decoded from the given buffer
      * @throws java.io.IOException if the given bytes could not be deserialized into an instance of this class
@@ -89,6 +94,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
     /**
      * Creates a new OrderPlacedEvent RecordBuilder.
+     *
      * @return A new OrderPlacedEvent RecordBuilder
      */
     public static cz.kot.order.event.OrderPlacedEvent.Builder newBuilder() {
@@ -97,6 +103,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
     /**
      * Creates a new OrderPlacedEvent RecordBuilder by copying an existing Builder.
+     *
      * @param other The existing builder to copy.
      * @return A new OrderPlacedEvent RecordBuilder
      */
@@ -110,6 +117,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
     /**
      * Creates a new OrderPlacedEvent RecordBuilder by copying an existing OrderPlacedEvent instance.
+     *
      * @param other The existing instance to copy.
      * @return A new OrderPlacedEvent RecordBuilder
      */
@@ -123,6 +131,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
     /**
      * Serializes this OrderPlacedEvent to a ByteBuffer.
+     *
      * @return a buffer holding the serialized data for this instance
      * @throws java.io.IOException if this instance could not be serialized
      */
@@ -171,6 +180,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
     /**
      * Gets the value of the 'orderNumber' field.
+     *
      * @return The value of the 'orderNumber' field.
      */
     public java.lang.CharSequence getOrderNumber() {
@@ -179,6 +189,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
     /**
      * Sets the value of the 'orderNumber' field.
+     *
      * @param value the value to set.
      */
     public void setOrderNumber(java.lang.CharSequence value) {
@@ -187,6 +198,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
     /**
      * Gets the value of the 'email' field.
+     *
      * @return The value of the 'email' field.
      */
     public java.lang.CharSequence getEmail() {
@@ -195,6 +207,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
     /**
      * Sets the value of the 'email' field.
+     *
      * @param value the value to set.
      */
     public void setEmail(java.lang.CharSequence value) {
@@ -264,13 +277,16 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
         private java.lang.CharSequence orderNumber;
         private java.lang.CharSequence email;
 
-        /** Creates a new Builder */
+        /**
+         * Creates a new Builder
+         */
         private Builder() {
             super(SCHEMA$, MODEL$);
         }
 
         /**
          * Creates a Builder by copying an existing Builder.
+         *
          * @param other The existing Builder to copy.
          */
         private Builder(cz.kot.order.event.OrderPlacedEvent.Builder other) {
@@ -287,6 +303,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
         /**
          * Creates a Builder by copying an existing OrderPlacedEvent instance
+         *
          * @param other The existing instance to copy.
          */
         private Builder(cz.kot.order.event.OrderPlacedEvent other) {
@@ -303,6 +320,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
         /**
          * Gets the value of the 'orderNumber' field.
+         *
          * @return The value.
          */
         public java.lang.CharSequence getOrderNumber() {
@@ -312,6 +330,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
         /**
          * Sets the value of the 'orderNumber' field.
+         *
          * @param value The value of 'orderNumber'.
          * @return This builder.
          */
@@ -324,6 +343,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
         /**
          * Checks whether the 'orderNumber' field has been set.
+         *
          * @return True if the 'orderNumber' field has been set, false otherwise.
          */
         public boolean hasOrderNumber() {
@@ -333,6 +353,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
         /**
          * Clears the value of the 'orderNumber' field.
+         *
          * @return This builder.
          */
         public cz.kot.order.event.OrderPlacedEvent.Builder clearOrderNumber() {
@@ -343,6 +364,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
         /**
          * Gets the value of the 'email' field.
+         *
          * @return The value.
          */
         public java.lang.CharSequence getEmail() {
@@ -352,6 +374,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
         /**
          * Sets the value of the 'email' field.
+         *
          * @param value The value of 'email'.
          * @return This builder.
          */
@@ -364,6 +387,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
         /**
          * Checks whether the 'email' field has been set.
+         *
          * @return True if the 'email' field has been set, false otherwise.
          */
         public boolean hasEmail() {
@@ -373,6 +397,7 @@ public class OrderPlacedEvent extends org.apache.avro.specific.SpecificRecordBas
 
         /**
          * Clears the value of the 'email' field.
+         *
          * @return This builder.
          */
         public cz.kot.order.event.OrderPlacedEvent.Builder clearEmail() {
